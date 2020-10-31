@@ -33,7 +33,7 @@ namespace StockTraderRI.ChartControls
                 Binding valueBinding = new Binding();
                 valueBinding.Source = _parentControl;
                 valueBinding.Path = new PropertyPath(ContinuousAxis.SourceValuesProperty);
-                this.SetBinding(ContinuousAxisPanel.DataValuesProperty, valueBinding);
+                SetBinding(ContinuousAxisPanel.DataValuesProperty, valueBinding);
 
                 Binding itemsBinding = new Binding();
                 itemsBinding.Source = this;
@@ -43,7 +43,7 @@ namespace StockTraderRI.ChartControls
                 Binding refLineBinding = new Binding();
                 refLineBinding.Source = _parentControl;
                 refLineBinding.Path = new PropertyPath(ContinuousAxis.ReferenceLineSeperationProperty);
-                this.SetBinding(ContinuousAxisPanel.ReferenceLineSeperationProperty, refLineBinding);
+                SetBinding(ContinuousAxisPanel.ReferenceLineSeperationProperty, refLineBinding);
 
                 Binding outputBinding = new Binding();
                 outputBinding.Source = this;
