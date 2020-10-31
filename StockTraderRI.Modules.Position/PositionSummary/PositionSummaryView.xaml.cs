@@ -4,25 +4,26 @@ namespace StockTraderRI.Modules.Position.PositionSummary
 {
     public partial class PositionSummaryView : UserControl
     {
-        public PositionSummaryView(IPositionSummaryViewModel viewModel)
-        {
+      //  public PositionSummaryView(IPositionSummaryViewModel viewModel)
+      public PositionSummaryView()
+    {
             InitializeComponent();
-            Model = viewModel;
+        //    Model = viewModel;
         }
 
         #region IPositionSummaryView Members
 
-        public IPositionSummaryViewModel Model
-        {
-            get
-            {
-                return DataContext as IPositionSummaryViewModel;
-            }
-            set
-            {
-                DataContext = value;
-            }
-        }
+        //public IPositionSummaryViewModel Model
+        //{
+        //    get
+        //    {
+        //        return DataContext as IPositionSummaryViewModel;
+        //    }
+        //    set
+        //    {
+        //        DataContext = value;
+        //    }
+        //}
         #endregion
     }
 }

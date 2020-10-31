@@ -23,12 +23,12 @@ namespace StockTraderRI.Modules.Position.PositionSummary
             }
 
             this.eventAggregator = eventAggregator;
-            this.Position = observablePosition;
+            Position = observablePosition;
 
             BuyCommand = ordersController.BuyCommand;
             SellCommand = ordersController.SellCommand;
 
-            this.CurrentPositionSummaryItem = new PositionSummaryItem("FAKEINDEX", 0, 0, 0);
+            CurrentPositionSummaryItem = new PositionSummaryItem("FAKEINDEX", 0, 0, 0);
         }
 
         public ICommand BuyCommand { get; private set; }

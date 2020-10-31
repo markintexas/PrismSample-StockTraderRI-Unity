@@ -14,7 +14,7 @@ namespace StockTraderRI.Modules.News.Controllers
             this.newsReaderViewModel = newsReaderViewModel;
             if (articleViewModel != null)
             {
-                this.articleViewModel.PropertyChanged += this.ArticleViewModel_PropertyChanged;
+                this.articleViewModel.PropertyChanged += ArticleViewModel_PropertyChanged;
             }
         }
 
@@ -23,7 +23,7 @@ namespace StockTraderRI.Modules.News.Controllers
             switch (e.PropertyName)
             {
                 case "SelectedArticle":
-                    this.newsReaderViewModel.NewsArticle = this.articleViewModel.SelectedArticle;
+                    newsReaderViewModel.NewsArticle = articleViewModel.SelectedArticle;
                     break;
             }
         }

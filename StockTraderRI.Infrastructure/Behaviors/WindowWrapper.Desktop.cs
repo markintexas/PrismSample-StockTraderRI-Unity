@@ -15,7 +15,7 @@ namespace StockTraderRI.Infrastructure.Behaviors
         /// </summary>
         public WindowWrapper()
         {
-            this.window = new Window();
+            window = new Window();
         }
 
         /// <summary>
@@ -23,8 +23,8 @@ namespace StockTraderRI.Infrastructure.Behaviors
         /// </summary>
         public event EventHandler Closed
         {
-            add { this.window.Closed += value; }
-            remove { this.window.Closed -= value; }
+            add { window.Closed += value; }
+            remove { window.Closed -= value; }
         }
 
         /// <summary>
@@ -32,8 +32,8 @@ namespace StockTraderRI.Infrastructure.Behaviors
         /// </summary>
         public object Content
         {
-            get { return this.window.Content; }
-            set { this.window.Content = value; }
+            get { return window.Content; }
+            set { window.Content = value; }
         }
 
         /// <summary>
@@ -41,8 +41,8 @@ namespace StockTraderRI.Infrastructure.Behaviors
         /// </summary>
         public object Owner
         {
-            get { return this.window.Owner; }
-            set { this.window.Owner = value as Window; }
+            get { return window.Owner; }
+            set { window.Owner = value as Window; }
         }
 
         /// <summary>
@@ -50,8 +50,8 @@ namespace StockTraderRI.Infrastructure.Behaviors
         /// </summary>
         public Style Style
         {
-            get { return this.window.Style; }
-            set { this.window.Style = value; }
+            get { return window.Style; }
+            set { window.Style = value; }
         }
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace StockTraderRI.Infrastructure.Behaviors
         /// </summary>
         public void Show()
         {
-            this.window.Show();
+            window.Show();
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace StockTraderRI.Infrastructure.Behaviors
         /// </summary>
         public void Close()
         {
-            this.window.Close();
+            window.Close();
         }
     }
 }

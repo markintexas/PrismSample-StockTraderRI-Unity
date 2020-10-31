@@ -32,23 +32,23 @@ namespace StockTraderRI.Controls
 
         protected override void OnSelectionChanged(SelectionChangedEventArgs e)
         {
-            this.Dispatcher.BeginInvoke(
+            Dispatcher.BeginInvoke(
                 (Action)delegate
                 {
-                    this.RaiseSelectionChangingEvent();
+                    RaiseSelectionChangingEvent();
 
-                    this.StopTimer();
+                    StopTimer();
 
-                    this.timer = new DispatcherTimer { Interval = new TimeSpan(0, 0, 0, 0, 500) };
+                    timer = new DispatcherTimer { Interval = new TimeSpan(0, 0, 0, 0, 500) };
 
                     EventHandler handler = null;
                     handler = (sender, args) =>
                     {
-                        this.StopTimer();
+                        StopTimer();
                         base.OnSelectionChanged(e);
                     };
-                    this.timer.Tick += handler;
-                    this.timer.Start();
+                    timer.Tick += handler;
+                    timer.Start();
                 });
         }
 
@@ -61,10 +61,10 @@ namespace StockTraderRI.Controls
 
         private void StopTimer()
         {
-            if (this.timer != null)
+            if (timer != null)
             {
-                this.timer.Stop();
-                this.timer = null;
+                timer.Stop();
+                timer = null;
             }
         }
     }

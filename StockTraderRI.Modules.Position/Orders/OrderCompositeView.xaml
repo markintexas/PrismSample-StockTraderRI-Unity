@@ -1,7 +1,10 @@
 ﻿<UserControl x:Class="StockTraderRI.Modules.Position.Orders.OrderCompositeView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:prism="http://prismlibrary.com/"
+    prism:ViewModelLocator.AutoWireViewModel="False"  
     xmlns:orders="clr-namespace:StockTraderRI.Modules.Position.Orders">
+  
     <Border Padding="5,5,5,5" BorderBrush="#77000000" BorderThickness="1,1,1,1" Margin="0,0,0,5" CornerRadius="12,12,12,12" Width="Auto">
         <StackPanel HorizontalAlignment="Stretch" Width="Auto">
             <Expander x:Name="CompositeExpander" IsExpanded="True" Header="{Binding OrderDetails}" Content="{Binding OrderDetails}">

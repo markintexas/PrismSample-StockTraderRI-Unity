@@ -22,7 +22,7 @@ namespace StockTraderRI.Modules.News.Article
         {
             set
             {
-                this.DataContext = value;
+                DataContext = value;
             }
         }
     }

@@ -19,7 +19,7 @@ namespace StockTraderRI.Modules.Market.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -67,7 +67,7 @@ namespace StockTraderRI.Modules.Market.Properties {
         ///  &lt;MarketItem TickerSymbol=&quot;STOCK1&quot; LastPrice=&quot;78.13&quot; Volume=&quot;100&quot;&gt;&lt;/MarketItem&gt;
         ///  &lt;MarketItem TickerSymbol=&quot;STOCK2&quot; LastPrice=&quot;23.80&quot; Volume=&quot;200&quot;&gt;&lt;/MarketItem&gt;
         ///  &lt;MarketItem TickerSymbol=&quot;STOCK3&quot; LastPrice=&quot;34.22&quot; Volume=&quot;300&quot;&gt;&lt;/MarketItem&gt;
-        ///  &lt;MarketItem Ticke [rest of string was truncated]&quot;;.
+        ///  &lt;MarketItem [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Market {
             get {
@@ -90,8 +90,7 @@ namespace StockTraderRI.Modules.Market.Properties {
         ///  &lt;MarketHistoryItem TickerSymbol=&quot;STOCK0&quot; Date=&quot;2008-02-23&quot;&gt;30.00&lt;/MarketHistoryItem&gt;
         ///  &lt;MarketHistoryItem TickerSymbol=&quot;STOCK0&quot; Date=&quot;2008-02-24&quot;&gt;35.00&lt;/MarketHistoryItem&gt;
         ///  &lt;MarketHistoryItem TickerSymbol=&quot;STOCK0&quot; Date=&quot;2008-02-25&quot;&gt;50.00&lt;/MarketHistoryItem&gt;
-        ///  &lt;MarketHistoryItem TickerSymbol=&quot;STOCK0&quot; Date=&quot;2008-02-26&quot;&gt;75.00&lt;/MarketHistoryItem&gt;
-        ///  &lt;Ma [rest of string was truncated]&quot;;.
+        ///  &lt;MarketHistoryItem TickerSymbol=&quot;STOCK0&quot; Date=&quot;2008-02-26&quot;&gt;75.00&lt;/MarketHistoryItem&gt;        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string MarketHistory {
             get {

@@ -19,7 +19,7 @@ namespace StockTraderRI.Infrastructure.Models
 
             foreach (MarketHistoryItem marketHistoryItem in list)
             {
-                this.Add(marketHistoryItem);
+                Add(marketHistoryItem);
             }
         }
     }

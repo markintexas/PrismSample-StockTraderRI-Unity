@@ -4,6 +4,7 @@
     xmlns:inf="clr-namespace:StockTraderRI.Infrastructure;assembly=StockTraderRI.Infrastructure"
     xmlns:infConverters="clr-namespace:StockTraderRI.Infrastructure.Converters;assembly=StockTraderRI.Infrastructure"
     x:Class="StockTraderRI.Modules.Position.Orders.OrderDetailsView"
+    xmlns:prism="http://prismlibrary.com/"
     x:Name="UserControl">
     <UserControl.Resources>
 

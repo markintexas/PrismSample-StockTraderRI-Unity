@@ -5,7 +5,7 @@ namespace StockTraderRI.Modules.Watch.Services
 {
     public interface IWatchListService
     {
-        ObservableCollection<string> RetrieveWatchList();
+        //ObservableCollection<string> RetrieveWatchList();
         ICommand AddWatchCommand { get; set; }
     }
 }

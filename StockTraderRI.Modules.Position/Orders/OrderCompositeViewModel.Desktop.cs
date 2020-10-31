@@ -12,7 +12,7 @@ namespace StockTraderRI.Modules.Position.Orders
             //This instance of TransactionInfo acts as a "shared model" between this view and the order details view.
             //The scenario says that these 2 views are decoupled, so they don't share the view model, they are only tied
             //with this TransactionInfo
-            this.orderDetailsViewModel.TransactionInfo = transactionInfo;
+            orderDetailsViewModel.TransactionInfo = transactionInfo;
 
             //Bind the CompositeOrderView header to a string representation of the TransactionInfo shared instance (we expect the details view model to modify it from user interaction).
             MultiBinding binding = new MultiBinding();

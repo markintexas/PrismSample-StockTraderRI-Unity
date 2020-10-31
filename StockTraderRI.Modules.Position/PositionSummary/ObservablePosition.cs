@@ -23,7 +23,7 @@ namespace StockTraderRI.Modules.Position.PositionSummary
                 throw new ArgumentNullException("eventAggregator");
             }
 
-            this.Items = new ObservableCollection<PositionSummaryItem>();
+            Items = new ObservableCollection<PositionSummaryItem>();
 
             this.accountPositionService = accountPositionService;
             this.marketFeedService = marketFeedService;
@@ -42,7 +42,7 @@ namespace StockTraderRI.Modules.Position.PositionSummary
                 throw new ArgumentNullException("tickerSymbolsPrice");
             }
 
-            foreach (PositionSummaryItem position in this.Items)
+            foreach (PositionSummaryItem position in Items)
             {
                 if (tickerSymbolsPrice.ContainsKey(position.TickerSymbol))
                 {
@@ -55,7 +55,7 @@ namespace StockTraderRI.Modules.Position.PositionSummary
         {
             if (e.AcctPosition != null)
             {
-                PositionSummaryItem positionSummaryItem = this.Items.First(p => p.TickerSymbol == e.AcctPosition.TickerSymbol);
+                PositionSummaryItem positionSummaryItem = Items.First(p => p.TickerSymbol == e.AcctPosition.TickerSymbol);
 
                 if (positionSummaryItem != null)
                 {
@@ -68,10 +68,10 @@ namespace StockTraderRI.Modules.Position.PositionSummary
         private void PopulateItems()
         {
             PositionSummaryItem positionSummaryItem;
-            foreach (AccountPosition accountPosition in this.accountPositionService.GetAccountPositions())
+            foreach (AccountPosition accountPosition in accountPositionService.GetAccountPositions())
             {
-                positionSummaryItem = new PositionSummaryItem(accountPosition.TickerSymbol, accountPosition.CostBasis, accountPosition.Shares, this.marketFeedService.GetPrice(accountPosition.TickerSymbol));
-                this.Items.Add(positionSummaryItem);
+                positionSummaryItem = new PositionSummaryItem(accountPosition.TickerSymbol, accountPosition.CostBasis, accountPosition.Shares, marketFeedService.GetPrice(accountPosition.TickerSymbol));
+                Items.Add(positionSummaryItem);
             }
         }
     }

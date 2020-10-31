@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Windows.Controls;
 
 namespace StockTraderRI.Modules.Position.Orders
@@ -6,7 +7,8 @@ namespace StockTraderRI.Modules.Position.Orders
     {
         public OrderCompositeView()
         {
-            InitializeComponent();
+      Debug.WriteLine("OrderCompositeView");
+      InitializeComponent();
         }
     }
 }

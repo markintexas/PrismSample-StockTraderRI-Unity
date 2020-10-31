@@ -13,16 +13,16 @@ namespace StockTraderRI.Modules.Position.PositionSummary
             InitializeComponent();
         }
 
-        public IPositionPieChartViewModel Model
-        {
-            get
-            {
-                return this.DataContext as IPositionPieChartViewModel;
-            }
-            set
-            {
-                this.DataContext = value;
-            }
-        }
+        //public IPositionPieChartViewModel Model
+        //{
+        //    get
+        //    {
+        //        return this.DataContext as IPositionPieChartViewModel;
+        //    }
+        //    set
+        //    {
+        //        this.DataContext = value;
+        //    }
+        //}
     }
 }

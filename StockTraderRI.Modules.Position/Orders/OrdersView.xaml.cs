@@ -10,9 +10,9 @@ namespace StockTraderRI.Modules.Position.Orders
             InitializeComponent();
         }
 
-        public IOrdersViewModel ViewModel
-        {
-            set { this.DataContext = value; }
-        }
+        //public IOrdersViewModel ViewModel
+        //{
+        //    set { DataContext = value; }
+        //}
     }
 }

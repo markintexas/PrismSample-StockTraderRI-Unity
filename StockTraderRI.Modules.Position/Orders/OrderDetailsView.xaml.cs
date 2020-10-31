@@ -1,12 +1,14 @@
+using System.Diagnostics;
 using System.Windows.Controls;
 
 namespace StockTraderRI.Modules.Position.Orders
 {
-    public partial class OrderDetailsView : UserControl
+  public partial class OrderDetailsView : UserControl
+  {
+    public OrderDetailsView()
     {
-        public OrderDetailsView()
-        {
-            this.InitializeComponent();
-        }
+      Debug.WriteLine("OrderDetailsView");
+      InitializeComponent();
     }
+  }
 }

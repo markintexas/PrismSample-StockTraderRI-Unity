@@ -23,26 +23,26 @@ namespace StockTraderRI.Modules.Market.TrendLine
             }
 
             this.marketHistoryService = marketHistoryService;
-            eventAggregator.GetEvent<TickerSymbolSelectedEvent>().Subscribe(this.TickerSymbolChanged);
+            eventAggregator.GetEvent<TickerSymbolSelectedEvent>().Subscribe(TickerSymbolChanged);
         }
 
         public void TickerSymbolChanged(string newTickerSymbol)
         {
-            MarketHistoryCollection newHistoryCollection = this.marketHistoryService.GetPriceHistory(newTickerSymbol);
+            MarketHistoryCollection newHistoryCollection = marketHistoryService.GetPriceHistory(newTickerSymbol);
 
-            this.TickerSymbol = newTickerSymbol;
-            this.HistoryCollection = newHistoryCollection;
+            TickerSymbol = newTickerSymbol;
+            HistoryCollection = newHistoryCollection;
         }
 
         public string TickerSymbol
         {
             get
             {
-                return this.tickerSymbol;
+                return tickerSymbol;
             }
             set
             {
-                SetProperty(ref this.tickerSymbol, value);
+                SetProperty(ref tickerSymbol, value);
             }
         }
 
@@ -54,7 +54,7 @@ namespace StockTraderRI.Modules.Market.TrendLine
             }
             private set
             {
-                SetProperty(ref this.historyCollection, value);
+                SetProperty(ref historyCollection, value);
             }
         }
     }

@@ -6,7 +6,7 @@ namespace StockTraderRI.Modules.Position.PositionSummary
 
         public PositionPieChartViewModel(IObservablePosition observablePosition)
         {
-            this.Position = observablePosition;
+            Position = observablePosition;
         }
     }
 }

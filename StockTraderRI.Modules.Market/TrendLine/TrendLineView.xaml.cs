@@ -2,20 +2,21 @@
 
 namespace StockTraderRI.Modules.Market.TrendLine
 {
-    public partial class TrendLineView : UserControl
+  public partial class TrendLineView : UserControl
+  {
+    //public TrendLineView(TrendLineViewModel viewModel)
+    public TrendLineView()
     {
-        public TrendLineView(TrendLineViewModel viewModel)
-        {
-            ViewModel = viewModel;
-            InitializeComponent();
-        }
-
-        TrendLineViewModel ViewModel
-        {
-            set
-            {
-                this.DataContext = value;
-            }
-        }
+      //ViewModel = viewModel;
+      InitializeComponent();
     }
+
+    //TrendLineViewModel ViewModel
+    //{
+    //    set
+    //    {
+    //        DataContext = value;
+    //    }
+    //}
+  }
 }

@@ -43,7 +43,8 @@ namespace StockTraderRI.Modules.Position.PositionSummary
             {
                 if (SetProperty(ref _costBasis, value))
                 {
-                    this.OnPropertyChanged(() => this.GainLossPercent);
+          //          this.OnPropertyChanged(() => GainLossPercent);
+          RaisePropertyChanged("GainLossPercent");
                 }
             }
         }
@@ -61,8 +62,10 @@ namespace StockTraderRI.Modules.Position.PositionSummary
             {
                 if (SetProperty(ref _shares, value))
                 {
-                    this.OnPropertyChanged(() => this.MarketValue);
-                    this.OnPropertyChanged(() => this.GainLossPercent);
+                    //this.OnPropertyChanged(() => MarketValue);
+                    //this.OnPropertyChanged(() => GainLossPercent);
+          RaisePropertyChanged("MarketValue");
+          RaisePropertyChanged("GainLossPercent");
                 }
             }
         }
@@ -80,10 +83,12 @@ namespace StockTraderRI.Modules.Position.PositionSummary
             {
                 if (SetProperty(ref _currentPrice, value))
                 {
-                    this.OnPropertyChanged(() => this.MarketValue);
-                    this.OnPropertyChanged(() => this.GainLossPercent);
-                }
-            }
+                    //this.OnPropertyChanged(() => MarketValue);
+                    //this.OnPropertyChanged(() => GainLossPercent);
+          RaisePropertyChanged("MarketValue");
+          RaisePropertyChanged("GainLossPercent");
+        }
+      }
         }
 
         public decimal MarketValue

@@ -22,12 +22,12 @@ namespace StockTraderRI.Modules.Position.Models
         {
             get
             {
-                return this.tickerSymbol;
+                return tickerSymbol;
             }
 
             set
             {
-                SetProperty(ref this.tickerSymbol, value);
+                SetProperty(ref tickerSymbol, value);
             }
         }
 
@@ -35,12 +35,12 @@ namespace StockTraderRI.Modules.Position.Models
         {
             get
             {
-                return this.transactionType;
+                return transactionType;
             }
 
             set
             {
-                SetProperty(ref this.transactionType, value);
+                SetProperty(ref transactionType, value);
             }
         }
     }

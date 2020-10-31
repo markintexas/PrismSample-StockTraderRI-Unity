@@ -1,6 +1,6 @@
 ﻿using Prism.Mvvm;
 
-namespace StockTraderRI
+namespace StockTraderRI.ViewModels
 {
     public class ShellViewModel : BindableBase
     {

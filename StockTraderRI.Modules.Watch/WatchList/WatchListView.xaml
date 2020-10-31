@@ -1,6 +1,9 @@
 ﻿<UserControl x:Class="StockTraderRI.Modules.Watch.WatchList.WatchListView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:prism="http://prismlibrary.com/"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+             
     xmlns:Converters="clr-namespace:StockTraderRI.Infrastructure.Converters;assembly=StockTraderRI.Infrastructure"
     Height="Auto" Width="Auto">
     <UserControl.Resources>
