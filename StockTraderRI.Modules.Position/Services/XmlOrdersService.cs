@@ -66,8 +66,9 @@ namespace StockTraderRI.Modules.Position.Services
           );
       ordersElement.Add(orderElement);
 
-      string message = String.Format(CultureInfo.CurrentCulture, Resources.LogOrderSubmitted,
-                                     orderElement.ToString());
+      // maodebug: Logging needs work
+      //string message = String.Format(CultureInfo.CurrentCulture, Resources.LogOrderSubmitted,
+      //                               orderElement.ToString());
       //logger.Log(message); //, Category.Debug, Priority.Low);
     }
   }

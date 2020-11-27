@@ -49,10 +49,6 @@ namespace StockTraderRI
       moduleCatalog.AddModule<WatchModule>();
       moduleCatalog.AddModule<NewsModule>();
       moduleCatalog.AddModule<OrdersController>();
-      //moduleCatalog.AddModule(typeof(StockTraderRI.Modules.Position.PositionModule));
-      //moduleCatalog.AddModule(typeof(StockTraderRI.Modules.Watch.WatchModule));
-      //moduleCatalog.AddModule(typeof(StockTraderRI.Modules.News.NewsModule));
-
     }
 
     protected override void ConfigureDefaultRegionBehaviors(IRegionBehaviorFactory regionBehaviors)
@@ -64,14 +60,8 @@ namespace StockTraderRI
     {
       base.ConfigureViewModelLocator();
 
-      //ViewModelLocationProvider.Register<IPositionPieChartViewModel, PositionPieChartViewModel>();
-      //ViewModelLocationProvider.Register<IPositionSummaryViewModel, PositionSummaryViewModel>();
-      //ViewModelLocationProvider.Register<WatchListView, WatchListViewModel>();
-      ViewModelLocationProvider.Register<AddWatchView, AddWatchViewModel>();
-      ViewModelLocationProvider.Register<NewsReaderView, NewsReaderViewModel>();
-
+      //ViewModelLocationProvider.Register<AddWatchView, AddWatchViewModel>();
+      //ViewModelLocationProvider.Register<NewsReaderView, NewsReaderViewModel>();
     }
-
-
   }
 }

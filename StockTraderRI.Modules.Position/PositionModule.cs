@@ -55,16 +55,13 @@ namespace StockTraderRI.Modules.Position
       containerRegistry.Register<IAccountPositionService, AccountPositionService>();
       containerRegistry.Register<IOrdersService, XmlOrdersService>();
       containerRegistry.Register<IOrdersController, OrdersController>();
-      containerRegistry.Register<IOrderCompositeViewModel, OrderCompositeViewModel>();
       containerRegistry.Register<IObservablePosition, ObservablePosition>();
       containerRegistry.Register<IPositionSummaryViewModel, PositionSummaryViewModel>();
       containerRegistry.Register<IPositionPieChartViewModel, PositionPieChartViewModel>();
 
       ViewModelLocationProvider.Register<PositionPieChartView, IPositionPieChartViewModel>();
       ViewModelLocationProvider.Register<PositionSummaryView, IPositionSummaryViewModel>();
-      //ViewModelLocationProvider.Register<OrderCompositeView, IOrderCompositeViewModel>();
       ViewModelLocationProvider.Register<OrdersView, OrdersViewModel>();
-
     }
   }
 }

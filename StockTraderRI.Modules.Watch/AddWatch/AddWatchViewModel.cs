@@ -10,7 +10,7 @@ namespace StockTraderRI.Modules.Watch.AddWatch
   public class AddWatchViewModel : BindableBase
   {
     private string stockSymbol;
-    private IWatchListService watchListService;
+    private readonly IWatchListService watchListService;
 
     public AddWatchViewModel(IWatchListService watchListService)
     {

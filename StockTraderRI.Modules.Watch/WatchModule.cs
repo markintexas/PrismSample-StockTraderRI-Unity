@@ -51,13 +51,6 @@ namespace StockTraderRI.Modules.Watch
       
       ViewModelLocationProvider.Register<WatchListView, WatchListViewModel>();
       ViewModelLocationProvider.Register<AddWatchView, AddWatchViewModel>();
-      
-      //containerRegistry.Register<AddWatchViewModel, AddWatchViewModel>();
-      //containerRegistry.Register<WatchListViewModel, WatchListViewModel>();
-      //containerRegistry.Register<AddWatchView, AddWatchView>();
-
-
-
     }
   }
 }

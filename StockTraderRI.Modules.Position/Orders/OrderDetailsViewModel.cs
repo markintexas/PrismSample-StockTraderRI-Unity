@@ -49,7 +49,7 @@ namespace StockTraderRI.Modules.Position.Orders
       };
 
       //SubmitCommand = new DelegateCommand<object>(Submit, CanSubmit);
-      SubmitCommand = new DelegateCommand<object>(Submit, CanSubmit); //.ObservesCanExecute(() => errors.Count == 0);
+      SubmitCommand = new DelegateCommand<object>(Submit, CanSubmit).ObservesProperty(() => HasErrors);
       CancelCommand = new DelegateCommand<object>(Cancel);
 
       SetInitialValidState();
@@ -146,6 +146,17 @@ namespace StockTraderRI.Modules.Position.Orders
       }
     }
 
+    private bool hasErrors;
+    
+    /// <summary>
+    /// True if there are errors, false otherwise
+    /// </summary>
+    public bool HasErrors
+    {
+      get { return hasErrors; }
+      set { SetProperty(ref hasErrors, value); }
+    }
+
     public DelegateCommand<object> SubmitCommand { get; private set; }
 
     public DelegateCommand<object> CancelCommand { get; private set; }
@@ -209,7 +220,8 @@ namespace StockTraderRI.Modules.Position.Orders
       if (!errors.Contains(ruleName))
       {
         errors.Add(ruleName);
-        SubmitCommand.RaiseCanExecuteChanged();
+        HasErrors = errors.Count > 0;
+        //SubmitCommand.RaiseCanExecuteChanged();
       }
     }
 
@@ -218,16 +230,17 @@ namespace StockTraderRI.Modules.Position.Orders
       if (errors.Contains(ruleName))
       {
         errors.Remove(ruleName);
-        if (errors.Count == 0)
-        {
-          SubmitCommand.RaiseCanExecuteChanged();
-        }
+        HasErrors = errors.Count != 0;
+        //if (errors.Count == 0)
+        //{
+        //  SubmitCommand.RaiseCanExecuteChanged();
+        //}
       }
     }
 
     private bool CanSubmit(object parameter)
     {
-      return errors.Count == 0;
+      return !HasErrors; // errors.Count == 0;
     }
 
     private bool HoldsEnoughShares(string symbol, int? sharesToSell)
@@ -261,13 +274,15 @@ namespace StockTraderRI.Modules.Position.Orders
         throw new InvalidOperationException();
       }
 
-      var order = new Order();
-      order.TransactionType = TransactionType;
-      order.OrderType = OrderType;
-      order.Shares = Shares.Value;
-      order.StopLimitPrice = StopLimitPrice.Value;
-      order.TickerSymbol = TickerSymbol;
-      order.TimeInForce = TimeInForce;
+      var order = new Order
+      {
+        TransactionType = TransactionType,
+        OrderType = OrderType,
+        Shares = Shares.Value,
+        StopLimitPrice = StopLimitPrice.Value,
+        TickerSymbol = TickerSymbol,
+        TimeInForce = TimeInForce
+      };
 
       ordersService.Submit(order);
 

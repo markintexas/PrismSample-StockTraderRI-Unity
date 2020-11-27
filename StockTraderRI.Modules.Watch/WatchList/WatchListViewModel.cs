@@ -20,7 +20,7 @@ namespace StockTraderRI.Modules.Watch.WatchList
   public class WatchListViewModel : BindableBase
   {
     private readonly IMarketFeedService marketFeedService;
-    private readonly IWatchListService watchListService;
+    //private readonly IWatchListService watchListService;
     private readonly IEventAggregator eventAggregator;
     private readonly IRegionManager regionManager;
    // private readonly ObservableCollection<string> watchList;
@@ -28,13 +28,13 @@ namespace StockTraderRI.Modules.Watch.WatchList
     private ObservableCollection<WatchItem> watchListItems;
     private WatchItem currentWatchItem;
 
-    public WatchListViewModel(IWatchListService watchListService, IMarketFeedService marketFeedService, IRegionManager regionManager, IEventAggregator eventAggregator)
+    public WatchListViewModel(/*IWatchListService watchListService, */IMarketFeedService marketFeedService, IRegionManager regionManager, IEventAggregator eventAggregator)
     {
       HeaderInfo = Resources.WatchListTitle;
       WatchListItems = new ObservableCollection<WatchItem>();
 
       this.marketFeedService = marketFeedService;
-      this.watchListService = watchListService ?? throw new ArgumentNullException("watchListService");
+      //this.watchListService = watchListService ?? throw new ArgumentNullException("watchListService");
       this.regionManager = regionManager;
 
       //watchList = watchListService.RetrieveWatchList();
